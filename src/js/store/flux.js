@@ -1,45 +1,38 @@
+
 const getState = ({ getStore, getActions, setStore }) => {
+
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+				recipeData: [],
+				favorites: [],
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
+			getAllRecipes: async () => { 				//New Function to Call Recipes
+				const response = await fetch(
+					`https://api.spoonacular.com/recipes/715538/similar?apiKey=${process.env.APIfood}`
+				);
+				const payload = await response.json();
+				setStore({recipeData:payload})
 			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
+
+			addFavorites: (item) => {   			//Favorites Function
+				const store = getStore();			//Access to the Store
+				store.favorites.push(item)			//Push Item
+				setStore(store)						//Save the Changes under Store (Update the State)
 			},
-			changeColor: (index, color) => {
-				//get the store
+
+			removeFavorites: index => {   			//Remove Favorites Function
 				const store = getStore();
-
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
-			}
-		}
+				let updatedList = store.favorites.filter(
+					(item, i) => index != i
+				);
+				setStore({favorites:updatedList})	
+			},					
+			
+		}	
 	};
 };
+
+//* ABOVE THIS LINE LIVES THE NEW API ACTIONS CALLING OBJECTS *//
 
 export default getState;

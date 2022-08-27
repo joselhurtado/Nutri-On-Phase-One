@@ -3,12 +3,12 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
-import { Demo } from "./views/demo";
-import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
-import { Navbar } from "./component/navbar";
+import { NavBar } from "./component/NavBar";
 import { Footer } from "./component/footer";
+import RecipeDetails from "/src/js/component/RecipeDetails";
+
 
 //create your first component
 const Layout = () => {
@@ -19,21 +19,17 @@ const Layout = () => {
 	return (
 		<div>
 			<BrowserRouter basename={basename}>
-				<ScrollToTop>
-					<Navbar />
+			<ScrollToTop>
+					<NavBar/>
 					<Switch>
 						<Route exact path="/">
 							<Home />
 						</Route>
-						<Route exact path="/demo">
-							<Demo />
-						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
-						</Route>
+						<Route exact path="/recipe/:theid"><RecipeDetails /></Route>
 						<Route>
-							<h1>Not found!</h1>
+							<h1 className="align-center" >Not found!</h1>
 						</Route>
+
 					</Switch>
 					<Footer />
 				</ScrollToTop>
