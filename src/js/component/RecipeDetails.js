@@ -34,7 +34,7 @@ export default function RecipeCard() {
                     <p className="card-text">Servings: <strong>{recipe?.servings}</strong></p>
                     <p className="card-text">Recipe Link: <strong>{recipe?.sourceUrl}</strong></p>
                     <p className="card-text">Product ID: <strong>{recipe?.id}</strong></p>
-                    <p className="card-text">Height: <strong>{recipe?.id}</strong></p>
+                    <p className="card-text">Protein: <strong>{recipe?.protein}</strong></p>
                     <p className="card-text">Height: <strong>{recipe?.id}</strong></p>
                     <p className="card-text">Height: <strong>{recipe?.id}</strong></p>
                     <p className="card-text">Height: <strong>{recipe?.id}</strong></p>
