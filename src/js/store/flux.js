@@ -7,12 +7,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 				favorites: [],
 		},
 		actions: {
-			getAllRecipes: async () => { 				//New Function to Call Recipes
+			getAllRecipes: async () => { 			//New Function to Call Recipes
 				const response = await fetch(
-					`https://api.spoonacular.com/recipes/715538/similar?apiKey=${process.env.APIfood}`
+					`https://api.spoonacular.com/recipes/random?apiKey=${process.env.APIfood}&number=12`
 				);
 				const payload = await response.json();
-				setStore({recipeData:payload})
+				setStore({recipeData:payload.recipes})
+				console.log(payload, "payload")
 			},
 
 			addFavorites: (item) => {   			//Favorites Function

@@ -17,7 +17,7 @@ export default function RecipeCard() {
                 <img src={`https://spoonacular.com/recipeImages/${x.id}-556x370.${x.imageType}`} className="card-img-top shapeImageTop" alt="recipe Image" />
                     <div className="card-body text-light">
                         <h4 className="card-title">{x.title}</h4>
-                        <p className="card-text">Ready in: {x.readyInMinutes}</p>  
+                        <p className="card-text">Ready in: {x.price}</p>  
                         <p className="card-text">ID: {x.id}</p>  
                         <div className="d-flex justify-content-between">
                         <Link to={`/recipe/${x.id}`} className="btn btn-orange">
