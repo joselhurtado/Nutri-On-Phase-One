@@ -5,9 +5,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 				recipeData: [],
 				recipeVegan: [],
+				recipeKeto: [],
+				recipePaleo: [],
 				favorites: [],
 		},
 		actions: {
+			getPopularRecipes: async () => { 			//New Function to Call Popular Recipes
+				const response = await fetch(
+					`https://api.spoonacular.com/recipes/random?apiKey=${process.env.APIfood}&number=6`
+				);
+				const payload = await response.json();
+				setStore({recipeData:payload.recipes})
+				console.log(payload, "Payload Popular Recipes")
+			},
 
 			getVeganRecipes: async () => { 			//New Function to Call Vegan Recipes
 				const response = await fetch(
@@ -18,14 +28,26 @@ const getState = ({ getStore, getActions, setStore }) => {
 				console.log(payload, "Payload Vegan Recipes")
 			},
 
-			getPopularRecipes: async () => { 			//New Function to Call Popular Recipes
+			getKetoRecipes: async () => { 			//New Function to Call Keto Recipes
 				const response = await fetch(
-					`https://api.spoonacular.com/recipes/random?apiKey=${process.env.APIfood}&number=6`
+					`https://api.spoonacular.com/recipes/complexSearch?query=keto&apiKey=${process.env.APIfood}&number=6`
 				);
 				const payload = await response.json();
-				setStore({recipeData:payload.recipes})
-				console.log(payload, "Payload Popular Recipes")
+				setStore({recipeKeto:payload.results})
+				console.log(payload, "Payload Keto Recipes")
 			},
+
+			getPaleoRecipes: async () => { 			//New Function to Call Keto Recipes
+				const response = await fetch(
+					`https://api.spoonacular.com/recipes/complexSearch?query=paleo&apiKey=${process.env.APIfood}&number=6`
+				);
+				const payload = await response.json();
+				setStore({recipePaleo:payload.results})
+				console.log(payload, "Payload Paleo Recipes")
+			},
+			
+
+
 
 			addFavorites: (item) => {   			//Favorites Function
 				const store = getStore();			//Access to the Store
