@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/home.css";
-import RecipeCard from "/src/js/component/RecipeCard";
+import RecipeCardPopular from "/src/js/component/RecipeCardPopular";
+import RecipeCardVegan from "/src/js/component/RecipeCardVegan";
 import { Hero } from "/src/js/component/hero";
 
 export const Home = () => {
@@ -10,9 +11,18 @@ export const Home = () => {
 				<Hero />
 			</div>
 			<div>
-				<h1 className="text-center titles">Search Popular Recipes</h1>
+				<h1 className="text-left">Popular Recipes</h1>
+				<p className="text-left titleP">Tasty recipes the whole family will love.</p>
 				<div>
-				<RecipeCard />
+				<RecipeCardPopular />
+				</div>
+			</div>
+
+			<div>
+				<h1 className="text-left">Vegan Recipes</h1>
+				<p className="text-left titleP">Tasty recipes the whole family will love.</p>
+				<div>
+				<RecipeCardVegan />
 				</div>
 			</div>
 		</div>

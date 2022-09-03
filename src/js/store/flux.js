@@ -4,16 +4,27 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 				recipeData: [],
+				recipeVegan: [],
 				favorites: [],
 		},
 		actions: {
-			getAllRecipes: async () => { 			//New Function to Call Recipes
+
+			getVeganRecipes: async () => { 			//New Function to Call Vegan Recipes
 				const response = await fetch(
-					`https://api.spoonacular.com/recipes/random?apiKey=${process.env.APIfood}&number=12`
+					`https://api.spoonacular.com/recipes/complexSearch?query=vegan&apiKey=${process.env.APIfood}&number=6`
+				);
+				const payload = await response.json();
+				setStore({recipeVegan:payload.results})
+				console.log(payload, "Payload Vegan Recipes")
+			},
+
+			getPopularRecipes: async () => { 			//New Function to Call Popular Recipes
+				const response = await fetch(
+					`https://api.spoonacular.com/recipes/random?apiKey=${process.env.APIfood}&number=6`
 				);
 				const payload = await response.json();
 				setStore({recipeData:payload.recipes})
-				console.log(payload, "payload")
+				console.log(payload, "Payload Popular Recipes")
 			},
 
 			addFavorites: (item) => {   			//Favorites Function

@@ -29,7 +29,11 @@ const injectContext = PassedComponent => {
 **/
 
 	useEffect(() => {
-		state.actions.getAllRecipes();
+		state.actions.getPopularRecipes();
+	}, []);
+
+	useEffect(() => {
+		state.actions.getVeganRecipes();
 	}, []);
 
 // The initial value for the context is not null anymore, but the current state of this component,
