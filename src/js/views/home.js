@@ -5,12 +5,16 @@ import RecipeCardVegan from "/src/js/component/RecipeCardVegan";
 import RecipeCardKeto from "/src/js/component/RecipeCardKeto";
 import RecipeCardPaleo from "/src/js/component/RecipeCardPaleo";
 import { Hero } from "/src/js/component/hero";
+import { ButtonDiets } from "/src/js/component/ButtonDiets"
 
 export const Home = () => {
 	return (
 		<div className="container">
 			<div>
 				<Hero />
+			</div>
+			<div>
+				<ButtonDiets />
 			</div>
 			<div>
 				<h1 className="text-left">Popular Recipes</h1>
