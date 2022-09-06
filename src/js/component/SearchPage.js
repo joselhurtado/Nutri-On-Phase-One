@@ -5,19 +5,11 @@ import RecipeCardVegan from "/src/js/component/RecipeCardVegan";
 import RecipeCardKeto from "/src/js/component/RecipeCardKeto";
 import RecipeCardPaleo from "/src/js/component/RecipeCardPaleo";
 import RecipeCardVegetarian from "/src/js/component/RecipeCardVegetarian";
-import { Hero } from "/src/js/component/hero";
 import { ButtonDiets } from "/src/js/component/ButtonDiets"
-import { Search } from "/src/js/component/Search";
 
-export const Home = () => {
+export const searchPage = () => {
 	return (
 		<div className="container">
-			<div>
-				<Hero />
-			</div>
-			<div>
-				<Search />
-			</div>
 			<div>
 				<ButtonDiets />
 			</div>
