@@ -7,6 +7,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				recipeVegan: [],
 				recipeKeto: [],
 				recipePaleo: [],
+				recipeVegetarian: [],
 				favorites: [],
 		},
 		actions: {
@@ -37,7 +38,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				console.log(payload, "Payload Keto Recipes")
 			},
 
-			getPaleoRecipes: async () => { 			//New Function to Call Keto Recipes
+			getPaleoRecipes: async () => { 			//New Function to Call Paleo Recipes
 				const response = await fetch(
 					`https://api.spoonacular.com/recipes/complexSearch?query=paleo&apiKey=${process.env.APIfood}&number=6`
 				);
@@ -45,9 +46,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({recipePaleo:payload.results})
 				console.log(payload, "Payload Paleo Recipes")
 			},
-			
 
-
+			getVegetarianRecipes: async () => { 			//New Function to Call Vegetarian Recipes
+				const response = await fetch(
+					`https://api.spoonacular.com/recipes/complexSearch?query=vegetarian&apiKey=${process.env.APIfood}&number=6`
+				);
+				const payload = await response.json();
+				setStore({recipeVegetarian:payload.results})
+				console.log(payload, "Payload Vegetarian Recipes")
+			},
 
 			addFavorites: (item) => {   			//Favorites Function
 				const store = getStore();			//Access to the Store

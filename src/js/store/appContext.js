@@ -33,6 +33,7 @@ const injectContext = PassedComponent => {
 		state.actions.getVeganRecipes();
 		state.actions.getKetoRecipes();
 		state.actions.getPaleoRecipes();
+		state.actions.getVegetarianRecipes();
 	}, []);
 
 	// useEffect(() => {
