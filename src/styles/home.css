@@ -193,3 +193,21 @@ hr {
     background-color: #D14532 !important;
     color:#000 !important;
 }
+.calorieTitle{
+    padding-top:-20px;
+}
+.card-text-diet{
+    width: 225px;
+    margin: auto;
+}
+.personalDietCircle{
+    border-radius: 50%;
+    width: 395px;
+    margin: auto;
+}
+.dietCircleTitle{
+    margin-top: 45px;
+}
+.dashboard{
+    background-color:#05727A;
+}

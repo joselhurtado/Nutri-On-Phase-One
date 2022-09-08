@@ -2,11 +2,11 @@ import React from "react";
 
 export default function Profile() {
   return (
-    <div class="bg-light">
-      <nav class="navbar navbar-light bg-light"></nav>
-      <div class="container">
+    <div class>
+      <nav class="navbar navbar-light"></nav>
+      <div class="container dashboard">
         <div class="row">
-          <div class="col-4 pt-4" style={{ paddingLeft: "90px" }}>
+          <div class="col-4 pt-4" style={{ paddingLeft: "50px" }}>
             <div class="card" style={{ width: "18rem" }}>
               <img
                 src="https://images.theconversation.com/files/478225/original/file-20220809-24-orxjcu.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop"
@@ -65,24 +65,26 @@ export default function Profile() {
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row" style={{paddingTop:"25px"}}>
           <div class="col-6">
-            <div class="card p">
+            <div class="card p personalDietCircle">
               <div class="card-body">
-                <h5 class="card-title text-center">Vegetarian Diet</h5>
+                <h5 class="card-title text-center dietCircleTitle">Vegetarian Diet</h5>
                 <p class="card-text text-center">My Weight Gain Journey</p>
+                <div class="card-text-diet">
                 <ul class="list-group list-group-flush text-center">
                   <li class="list-group-item">Age</li>
                   <li class="list-group-item">Weight</li>
                   <li class="list-group-item">Height</li>
                   <li class="list-group-item">Goal Weight</li>
                 </ul>
+                </div>
               </div>
             </div>
           </div>
           <div class="col-6">
-            <div class="card ">
-              <h5 class="card-title text-center">Calorie Calculator</h5>
+            <div class="card">
+              <h5 class="card-title text-center mt-5">Calorie Calculator</h5>
               <div class="col-sm">
                 <label
                   for="exampleFormControlInput3"
@@ -172,7 +174,7 @@ export default function Profile() {
                 <option value="4">Active</option>
               </select>
               <div class="d-grid gap-2 d-md-block">
-                <button class="btn btn-success" type="button">
+                <button class="btn" type="button" style={{backgroundColor:"#05727A", color:"white"}}>
                   Calculate
                 </button>
                 <button class="btn btn-secondary" type="button">
