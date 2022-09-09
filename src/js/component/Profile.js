@@ -7,7 +7,7 @@ export default function Profile() {
       <div class="container dashboard">
         <div class="row">
           <div class="col-4 pt-4" style={{ paddingLeft: "50px" }}>
-            <div class="card" style={{ width: "18rem" }}>
+            <div class="card" style={{ width: "18rem", height:"90%" }}>
               <img
                 src="https://images.theconversation.com/files/478225/original/file-20220809-24-orxjcu.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop"
                 class="card-img-top mx-auto d-block"
@@ -185,7 +185,7 @@ export default function Profile() {
           </div>
           <div class="col-6">
             <div class="card">
-              <div class="card-body d-flex justify-content-center align-items-center flex-column">
+              <div class="card-body d-flex justify-content-center align-items-center flex-column favoriteMeal">
                 <h5 class="card-title text-center">My Favorite Meals</h5>
                 <div
                   id="carouselExampleSlidesOnly"
