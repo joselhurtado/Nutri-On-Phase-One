@@ -7,22 +7,21 @@ export const NavBar = () => {
 	const {store, actions} = useContext(Context); //Const to call store data from Flux (Actions is not used yet)
 
 	return (
-		<div className="navbar p-3 fixed-top">
+		<div className="navbar navbar-expand-md fixed-top">
 			<div className="container">
 				<Link to="/">
 					<img className="NavLogo" src={NavLogo} alt="NutriOn Logo"/>
 				</Link>
 				<div className="dropdown">
-				<span className="btn btn-orange btn-access" href="#" role="button">
-					Login
-				</span>
-				<span className="btn btn-orange btn-access" href="#" role="button">
-					Sign Up
-				</span>
-				<button className="btn btn-orange dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
-    					<span className="fa fa-heart"/> {`Favorites (${store.favorites.length})`}
+				<Link to="/LoginPage">
+					<span className="btn btn-orange m-2" href="#" role="button">
+					LOG IN
+					</span>
+				</Link>
+				<button className="btn dropdown-toggle text-light" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+				<span className="fa fa-heart"/>{`Favorites (${store.favorites.length})`}
 						</button>
-						<div className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
+						<div className="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownMenuButton">
 							{store.favorites.map((item, index) => {
 								return(
 									<div key={index}>

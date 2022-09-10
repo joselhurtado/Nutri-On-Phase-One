@@ -5,21 +5,21 @@ import RecipeCardVegan from "/src/js/component/RecipeCardVegan";
 import RecipeCardKeto from "/src/js/component/RecipeCardKeto";
 import RecipeCardPaleo from "/src/js/component/RecipeCardPaleo";
 import RecipeCardVegetarian from "/src/js/component/RecipeCardVegetarian";
-import { Hero } from "/src/js/component/hero";
 import { ButtonDiets } from "/src/js/component/ButtonDiets"
+import { HeroSearch } from "/src/js/component/HeroSearch";
 
-export const Home = () => {
+export const SearchPage = () => {
 	return (
 		<div className="container">
 			<div>
-				<Hero />
+				<HeroSearch />
 			</div>
 			<div>
 				<ButtonDiets />
 			</div>
 			<div>
 				<h1 className="text-left">Popular Recipes</h1>
-				<p className="text-left titleP">Tasty recipes the whole family will love.</p>
+				<p className="text-left">Tasty recipes the whole family will love.</p>
 				<div>
 				<RecipeCardPopular />
 				</div>
@@ -27,7 +27,7 @@ export const Home = () => {
 
 			<div>
 				<h1 className="text-left">Vegan Recipes</h1>
-				<p className="text-left titleP">Tasty recipes the whole family will love.</p>
+				<p className="text-left ">Tasty recipes the whole family will love.</p>
 				<div>
 				<RecipeCardVegan />
 				</div>
@@ -35,7 +35,7 @@ export const Home = () => {
 
 			<div>
 				<h1 className="text-left">Keto Recipes</h1>
-				<p className="text-left titleP">Tasty recipes the whole family will love.</p>
+				<p className="text-left ">Tasty recipes the whole family will love.</p>
 				<div>
 				<RecipeCardKeto />
 				</div>
@@ -43,7 +43,7 @@ export const Home = () => {
 
 			<div>
 				<h1 className="text-left">Paleo Recipes</h1>
-				<p className="text-left titleP">Tasty recipes the whole family will love.</p>
+				<p className="text-left ">Tasty recipes the whole family will love.</p>
 				<div>
 				<RecipeCardPaleo />
 				</div>
@@ -51,7 +51,7 @@ export const Home = () => {
 
 			<div>
 				<h1 className="text-left">Vegetarian Recipes</h1>
-				<p className="text-left titleP">Tasty recipes the whole family will love.</p>
+				<p className="text-left ">Tasty recipes the whole family will love.</p>
 				<div>
 				<RecipeCardVegetarian />
 				</div>
