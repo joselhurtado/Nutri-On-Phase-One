@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
+import Welcomepage from "./views/welcomepage";
 import injectContext from "./store/appContext";
 
 import { NavBar } from "./component/NavBar";
@@ -20,20 +21,29 @@ const Layout = () => {
 		<div>
 			<BrowserRouter basename={basename}>
 			<ScrollToTop>
-					<NavBar/>
 					<Switch>
-						<Route exact path="/">
+					<Route exact path="/">
+							<Welcomepage />
+					</Route>
+					<Route exact path="/homepage">
+						<NavBar/>
 							<Home />
-						</Route>
-						<Route exact path="/dashboard">
+							<Footer />
+					</Route>
+					<Route exact path="/dashboard">
+						<NavBar/>
 							<Profile />
-						</Route>
-						<Route exact path="/recipe/:theid"><RecipeDetails /></Route>
-						<Route>
+							<Footer />
+					</Route>
+					<Route exact path="/recipe/:theid">
+						<NavBar/>
+							<RecipeDetails />
+							<Footer />
+							</Route>
+					<Route>
 							<h1 className="align-center" >Not found!</h1>
-						</Route>
+					</Route>
 					</Switch>
-					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>

@@ -1,0 +1,55 @@
+.welcomeHeader{
+    display: flex;
+    background-color: #05727A;
+    justify-content: center;
+}
+body{
+    background-color: #05727A
+}
+.welcomeTitle{
+    margin-right: 10px;
+}
+.Header-left{
+    color: skyblue;
+}
+.welcomeP{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin-top: 8px;
+}
+.containerForm{
+    text-align: center;
+}
+.btn-primary{
+    width: 150px;
+    height: 40px;
+    margin: 10px;
+    background-color: #D14532;
+}
+.formbody{
+    display: flex;
+}
+.hform{
+    color: white;
+}
+
+.introButtons{
+    margin-bottom: 10px;
+}
+.carouselsign{
+    margin-top: 30px;
+}
+.belowTitle{
+    text-align: center;
+    color: White;
+}
+.hcarousel{
+    color: babyblue;
+}
+.welcome-details-title{
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
