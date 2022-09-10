@@ -3,8 +3,6 @@ import React from "react";
 export default function Profile() {
   return (
     <div class="bg-light">
-      <nav class="navbar navbar-light bg-light">
-      </nav>
     <div class="container">
       <div class="row">
         <div class="col-4 pt-4" style={{paddingLeft: "90px"}}>
