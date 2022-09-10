@@ -1,3 +1,36 @@
 .footer-parent-box{
     background-color: #05727A;
 }
+.ageInput{
+    margin-bottom: 5%;
+    width: 30%;
+    margin-left: 5%;
+}
+.gender-label{
+    margin-left: 5%
+}
+.gender-options{
+    margin-left:19%;
+    margin-top: -5%;
+}
+.height{
+    width:55%;
+    margin-left: 5%;
+}
+.weight{
+    margin-bottom: 5%;
+    width: 30%;
+    margin-left: 5%;
+}
+.activity-level{
+    margin-left: 5%;
+    width: 85%;
+}
+.calculate-clear{
+    margin-left: 35%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.calculate-button{
+    margin-right: 1%;
+}

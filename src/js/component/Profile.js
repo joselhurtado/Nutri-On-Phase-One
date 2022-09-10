@@ -71,8 +71,8 @@ export default function Profile() {
           <div class="col-6">
             <div class="card p personalDietCircle">
               <div class="card-body">
-                <h5 class="card-title text-center bg-white dietCircleTitle">Vegetarian Diet</h5>
-                <p class="card-text text-center bg-white">My Weight Gain Journey</p>
+                <h5 class="card-title text-center dietCircleTitle">Vegetarian Diet</h5>
+                <p class="card-text text-center">My Weight Gain Journey</p>
                 <div class="card-text-diet">
                 <ul class="list-group list-group-flush text-center">
                   <li class="list-group-item">Age</li>
@@ -85,7 +85,7 @@ export default function Profile() {
             </div>
           </div>
           <div class="col-6">
-            <div class="card">
+            <div class="card calorie-calculator">
               <h5 class="card-title text-center mt-5 bg-white">Calorie Calculator</h5>
               <div class="col-sm">
                 <label
@@ -94,13 +94,13 @@ export default function Profile() {
                 ></label>
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control ageInput"
                   id="exampleFormControlInput"
                   placeholder="Age"
                 />
                 <fieldset class="row mb-3">
-                  <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
-                  <div class="col-sm-10">
+                  <legend class="col-form-label col-sm-2 pt-0 gender-label">Gender</legend>
+                  <div class="col-sm-10 gender-options">
                     <div class="form-check">
                       <input
                         class="form-check-input"
@@ -141,7 +141,7 @@ export default function Profile() {
                   </div>
                 </fieldset>
               </div>
-              <div class="input-group">
+              <div class="input-group height">
                 <span class="input-group-text">Height</span>
                 <input
                   type="text"
@@ -163,20 +163,20 @@ export default function Profile() {
                 ></label>
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control weight"
                   id="exampleFormControlInput"
                   placeholder="Weight (lbs)"
                 />
               </div>
-              <select class="form-select" aria-label="Default select example">
+              <select class="form-select activity-level" aria-label="Default select example">
                 <option selected>Activity Level</option>
                 <option value="1">Sedentary</option>
                 <option value="2">Light</option>
                 <option value="3">Moderate</option>
                 <option value="4">Active</option>
               </select>
-              <div class="d-grid gap-2 d-md-block">
-                <button class="btn" type="button" style={{backgroundColor:"#05727A", color:"white"}}>
+              <div class="d-grid gap-2 d-md-block calculate-clear">
+                <button class="btn calculate-button" type="button" style={{backgroundColor:"#05727A", color:"white"}}>
                   Calculate
                 </button>
                 <button class="btn btn-secondary" type="button">
