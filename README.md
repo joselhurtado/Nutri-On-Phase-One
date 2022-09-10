@@ -1,6 +1,6 @@
  # WebApp boilerplate with React JS for Nutri-On Phase One
 
- <img src='/src/img/NutriON-edits-082622-JH.png' />
+ <img src='/src/img/Nutri-On-Phase-One_Sep10.png' />
 
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello-webapp.git)
