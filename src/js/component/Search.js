@@ -8,17 +8,23 @@ export const Search = ({ getQuery }) => {
     }
 
 	return (
-        <div className="container">
-            <section className="search searchNav">
-                <form>
-                    <input type="text" 
+    <div className="row">
+        <div className="col-sm">
+                    <input type="search" 
                     className="form-control" 
-                     placeholder="Search Your Recipe" 
+                    placeholder="Search Your Recipe" 
+                    aria-label="Search"
                     value={text} 
                     onChange={(e) => onChange(e.target.value)}
                     autoFocus />
-                </form>
-            </section>
         </div>
+        <div className="col-sm-2">
+            <div className="btn btnSearch" type="submit"><span className="fas fa-search"></span> Search</div>
+        </div>
+    </div>
+
 );
 }
+
+
+export default Search;

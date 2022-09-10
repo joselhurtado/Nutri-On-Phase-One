@@ -1,15 +1,19 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
-
-import { Home } from "./views/home";
-import Welcomepage from "./views/welcomepage";
+import JRWelcomepage from "./views/JRwelcomepage";
+import { Home } from "./views/Home";
+import { LandingPage }  from "./views/LandingPage";
+import { Login }  from "./views/LoginPage";
+import { SearchPage } from "./views/SearchPage";
+import { WelcomePage } from "./views/WelcomePage";
 import injectContext from "./store/appContext";
 
 import { NavBar } from "./component/NavBar";
 import { Footer } from "./component/footer";
 import RecipeDetails from "/src/js/component/RecipeDetails";
-import  Profile  from "/src/js/component/Profile";
+import Profile from "/src/js/component/Profile";
+
 
 
 const Layout = () => {
@@ -33,14 +37,23 @@ const Layout = () => {
 					<Route exact path="/dashboard">
 						<NavBar/>
 							<Profile />
-							<Footer />
-					</Route>
-					<Route exact path="/recipe/:theid">
-						<NavBar/>
+						</Route>
+						<Route exact path="/LoginPage">
+							<Login />
+						</Route>
+						<Route exact path="/landingPage">
+							<LandingPage />
+						</Route>
+						<Route exact path="/searchPage">
+							<SearchPage />
+						</Route>
+						<Route exact path="/WelcomePage">
+							<WelcomePage />
+						</Route>
+						<Route exact path="/recipe/:theid">
 							<RecipeDetails />
-							<Footer />
-							</Route>
-					<Route>
+						</Route>
+						<Route>
 							<h1 className="align-center" >Not found!</h1>
 					</Route>
 					</Switch>

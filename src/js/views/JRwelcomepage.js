@@ -6,7 +6,7 @@ import { Welcomedetails } from '../component/Welcomedetails'
 
 
 
-function Welcomepage() {
+function JRWelcomepage() {
   return (
     <div className="container-main">
               <div className="Form">
@@ -76,4 +76,4 @@ function Welcomepage() {
   )
 }
 
-export default Welcomepage
+export default JRWelcomepage
