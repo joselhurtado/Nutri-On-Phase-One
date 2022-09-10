@@ -49,7 +49,7 @@ const Layout = () => {
 							<RecipeDetails />
 						</Route>
 						<Route>
-							<h1 className="align-center" >Not found!</h1>
+							<h1 className="align-center" >404 Not found!</h1>
 						</Route>
 					</Switch>
 					<Footer />
