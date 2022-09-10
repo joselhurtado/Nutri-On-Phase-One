@@ -174,7 +174,8 @@ hr {
 
 .footerContainer {
     text-align: center;
-    background-color: #05727A;
+    /* background-color: #05727A; */
+    /* gray block on top of footer */
     height: 100px;
     color: #fff;
 }
@@ -204,11 +205,18 @@ hr {
     border-radius: 50%;
     width: 395px;
     margin: auto;
+    
 }
 .dietCircleTitle{
     margin-top: 45px;
+    width:80%;
+    margin-left: 10%;
+    
 }
 .dashboard{
+    background-color:#05727A;
+}
+.dashboard-container{
     background-color:#05727A;
 }
 .favoriteMeal{

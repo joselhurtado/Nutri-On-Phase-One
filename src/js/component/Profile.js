@@ -1,8 +1,10 @@
 import React from "react";
+import "../../styles/dashboard.css";
+
 
 export default function Profile() {
   return (
-    <div class>
+    <div class="dashboard-container">
       <nav class="navbar navbar-light"></nav>
       <div class="container dashboard">
         <div class="row">
@@ -69,8 +71,8 @@ export default function Profile() {
           <div class="col-6">
             <div class="card p personalDietCircle">
               <div class="card-body">
-                <h5 class="card-title text-center dietCircleTitle">Vegetarian Diet</h5>
-                <p class="card-text text-center">My Weight Gain Journey</p>
+                <h5 class="card-title text-center bg-white dietCircleTitle">Vegetarian Diet</h5>
+                <p class="card-text text-center bg-white">My Weight Gain Journey</p>
                 <div class="card-text-diet">
                 <ul class="list-group list-group-flush text-center">
                   <li class="list-group-item">Age</li>
@@ -84,7 +86,7 @@ export default function Profile() {
           </div>
           <div class="col-6">
             <div class="card">
-              <h5 class="card-title text-center mt-5">Calorie Calculator</h5>
+              <h5 class="card-title text-center mt-5 bg-white">Calorie Calculator</h5>
               <div class="col-sm">
                 <label
                   for="exampleFormControlInput3"
