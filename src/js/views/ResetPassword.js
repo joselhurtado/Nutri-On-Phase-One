@@ -18,7 +18,7 @@ export const ResetPassword = () => {
 					
 				<Link to="/dashboard">
 					<span className="container btn btn-orange mt-4" href="#" role="button">
-					LOGIN IN
+					RESET PASSWORD
 					</span>
 				</Link>
 				</div>

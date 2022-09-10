@@ -26,6 +26,12 @@ export const Login = () => {
 					LOGIN IN
 					</span>
 				</Link>
+
+				<Link to="/ResetPassword">
+					<span className="container btn btn-light mt-4" href="#" role="button">
+					RESET PASSWORD
+					</span>
+				</Link>
 				</div>
 
 				<div className="row introBTN text-center">
