@@ -4,6 +4,7 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/Home";
 import { LandingPage }  from "./views/LandingPage";
+import { ResetPassword }  from "./views/ResetPassword";
 import { Login }  from "./views/LoginPage";
 import { SearchPage } from "./views/SearchPage";
 import { WelcomePage } from "./views/WelcomePage";
@@ -35,6 +36,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/LoginPage">
 							<Login />
+						</Route>
+						<Route exact path="/ResetPassword">
+							<ResetPassword />
 						</Route>
 						<Route exact path="/landingPage">
 							<LandingPage />
