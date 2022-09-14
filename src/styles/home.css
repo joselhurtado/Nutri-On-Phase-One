@@ -194,7 +194,7 @@ h1 {
 h5 {
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
-    color: #252525;
+    /* color: #252525; */
     margin-top: 100px;
 }
 
@@ -323,6 +323,7 @@ hr {
     border-radius: 50%;
     width: 395px;
     margin: auto;
+    background: rgb(230, 230, 230);
     
 }
 .dietCircleTitle{
@@ -330,12 +331,14 @@ hr {
     width:80%;
     margin-left: 10%;
     
+    
 }
 .dashboard{
-    background-color:#05727A;
+    background-color:#004C52;
 }
 .dashboard-container{
-    background-color:#05727A;
+    background-color:#004C52;
+    width:100vw;
 }
 .favoriteMeal{
     margin-top: -6rem;

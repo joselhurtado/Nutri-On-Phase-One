@@ -1,15 +1,20 @@
 import React from "react";
 import "../../styles/dashboard.css";
 
-
 export default function Profile() {
   return (
     <div class="dashboard-container">
-      <nav class="navbar navbar-light"></nav>
+      <nav class="navbar navbar-light bg-light"></nav>
       <div class="container dashboard">
-        <div class="row">
-          <div class="col-4 pt-4" style={{ paddingLeft: "50px" }}>
-            <div class="card" style={{ width: "18rem", height:"90%" }}>
+        <div
+          class="row"
+          style={{ paddingBottom: "100px", paddingTop: "140px" }}
+        >
+          <div class="col-4 pt-4" style={{ paddingLeft: "30px" }}>
+            <div
+              class="card"
+              style={{ width: "18rem", height: "90%", background: "#E6E6E6" }}
+            >
               <img
                 src="https://images.theconversation.com/files/478225/original/file-20220809-24-orxjcu.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop"
                 class="card-img-top mx-auto d-block"
@@ -31,14 +36,22 @@ export default function Profile() {
               </div>
             </div>
           </div>
-          <div class="col-8 pt-4" style={{ paddingRight: "60px" }}>
-            <div class="mb-3">
+          <div
+            class="col-8 pt-4"
+            style={{
+              paddingRight: "60px",
+              paddingLeft: "20px",
+              paddingTop: "80px",
+              background: "#E6E6E6",
+            }}
+          >
+            <div class="mb-3 pt-4">
               <label for="exampleFormControlInput1" class="form-label">
                 Full Name
               </label>
               <input
                 type="text"
-                class="form-control"
+                class="form-control fullName"
                 id="exampleFormControlInput1"
                 placeholder="Full Name"
               />
@@ -67,26 +80,37 @@ export default function Profile() {
             </div>
           </div>
         </div>
-        <div class="row" style={{paddingTop:"25px"}}>
+        <div
+          class="row bmiDiet"
+          style={{
+            paddingTop: "60px",
+            paddingBottom: "60px",
+            backgroundColor: "#D14532",
+          }}
+        >
           <div class="col-6">
             <div class="card p personalDietCircle">
-              <div class="card-body">
-                <h5 class="card-title text-center dietCircleTitle">Vegetarian Diet</h5>
+              <div class="card-body innerCircle">
+                <h4 class="card-title text-center dietCircleTitle">
+                  Vegetarian Diet
+                </h4>
                 <p class="card-text text-center">My Weight Gain Journey</p>
                 <div class="card-text-diet">
-                <ul class="list-group list-group-flush text-center">
-                  <li class="list-group-item">Age</li>
-                  <li class="list-group-item">Weight</li>
-                  <li class="list-group-item">Height</li>
-                  <li class="list-group-item">Goal Weight</li>
-                </ul>
+                  <ul class="list-group list-group-flush text-center">
+                    <li class="list-group-item">Age</li>
+                    <li class="list-group-item">Weight</li>
+                    <li class="list-group-item">Height</li>
+                    <li class="list-group-item">Goal Weight</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-6">
             <div class="card calorie-calculator">
-              <h5 class="card-title text-center mt-5 bg-white">Calorie Calculator</h5>
+              <h4 class="card-title text-center mt-5 bg-white">
+                Calorie Calculator
+              </h4>
               <div class="col-sm">
                 <label
                   for="exampleFormControlInput3"
@@ -99,7 +123,9 @@ export default function Profile() {
                   placeholder="Age"
                 />
                 <fieldset class="row mb-3">
-                  <legend class="col-form-label col-sm-2 pt-0 gender-label">Gender</legend>
+                  <legend class="col-form-label col-sm-2 pt-0 gender-label">
+                    Gender
+                  </legend>
                   <div class="col-sm-10 gender-options">
                     <div class="form-check">
                       <input
@@ -168,7 +194,10 @@ export default function Profile() {
                   placeholder="Weight (lbs)"
                 />
               </div>
-              <select class="form-select activity-level" aria-label="Default select example">
+              <select
+                class="form-select activity-level"
+                aria-label="Default select example"
+              >
                 <option selected>Activity Level</option>
                 <option value="1">Sedentary</option>
                 <option value="2">Light</option>
@@ -176,7 +205,11 @@ export default function Profile() {
                 <option value="4">Active</option>
               </select>
               <div class="d-grid gap-2 d-md-block calculate-clear">
-                <button class="btn calculate-button" type="button" style={{backgroundColor:"#05727A", color:"white"}}>
+                <button
+                  class="btn calculate-button"
+                  type="button"
+                  style={{ backgroundColor: "#05727A", color: "white" }}
+                >
                   Calculate
                 </button>
                 <button class="btn btn-secondary" type="button">
@@ -185,71 +218,71 @@ export default function Profile() {
               </div>
             </div>
           </div>
-          <div class="col-6">
-            <div class="card">
-              <div class="card-body d-flex justify-content-center align-items-center flex-column favoriteMeal">
-                <h5 class="card-title text-center">My Favorite Meals</h5>
-                <div
-                  id="carouselExampleSlidesOnly"
-                  class="carousel slide"
-                  data-bs-ride="carousel"
-                >
-                  <div class="carousel-inner ">
-                    <div class="carousel-item active  " data-bs-interval="2000">
-                      <img
-                        src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&resize=1200,1200"
-                        class="d-block "
-                        style={{ width: "480px", height: "360px" }}
-                        alt="..."
-                      />
-                    </div>
-                    <div class="carousel-item" data-bs-interval="2000">
-                      <img
-                        src="https://images.theconversation.com/files/368263/original/file-20201109-22-lqiq5c.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop"
-                        class="d-block"
-                        style={{ width: "480px", height: "360px" }}
-                        alt="..."
-                      />
-                    </div>
-                    <div class="carousel-item" data-bs-interval="2000">
-                      <img
-                        src="https://colonydiner.com/wp-content/uploads/2021/03/French.jpg"
-                        class="d-block"
-                        style={{ width: "480px", height: "360px" }}
-                        alt="..."
-                      />
-                    </div>
+        </div>
+        <div class="col-6 favoriteCard">
+          <div class="card">
+            <div class="card-body d-flex justify-content-center align-items-center flex-column favoriteMeal">
+              <h5 class="card-title text-center text-dark">My Favorite Meals</h5>
+              <div
+                id="carouselExampleSlidesOnly"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner ">
+                  <div class="carousel-item active  " data-bs-interval="2000">
+                    <img
+                      src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&resize=1200,1200"
+                      class="d-block "
+                      style={{ width: "480px", height: "360px" }}
+                      alt="..."
+                    />
                   </div>
-                  <button
-                    class="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#carouselExampleInterval"
-                    data-bs-slide="prev"
-                  >
-                    <span
-                      class="carousel-control-prev-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button
-                    class="carousel-control-next"
-                    type="button"
-                    data-bs-target="#carouselExampleInterval"
-                    data-bs-slide="next"
-                  >
-                    <span
-                      class="carousel-control-next-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img
+                      src="https://images.theconversation.com/files/368263/original/file-20201109-22-lqiq5c.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop"
+                      class="d-block"
+                      style={{ width: "480px", height: "360px" }}
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img
+                      src="https://colonydiner.com/wp-content/uploads/2021/03/French.jpg"
+                      class="d-block"
+                      style={{ width: "480px", height: "360px" }}
+                      alt="..."
+                    />
+                  </div>
                 </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleInterval"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleInterval"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
             </div>
           </div>
         </div>
-      </div>
+        </div>
     </div>
   );
 }
