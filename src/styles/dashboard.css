@@ -46,6 +46,19 @@
 }
 .fullName{
     background-color: "#E6E6E6";
+    color: rgb(230, 230, 230);
+    font-size: 118%;
+    font-family: 'Poppins', sans-serif;
+}
+.usernameInput{
+    color: rgb(230, 230, 230);
+    font-size: 118%;
+    font-family: 'Poppins', sans-serif;
+}
+.emailAddressInput{
+    color: rgb(230, 230, 230);
+    font-size: 118%;
+    font-family: 'Poppins', sans-serif;
 }
 .innerCircle{
     height: 390px;
@@ -61,4 +74,10 @@
 }
 .favoriteColumn{
     backgroundColor: rgb(230, 230, 230);
+}
+.profilePicture{
+    width: 18rem;
+    height: 90%;
+    background-color: #05727A;
+    margin-left: 9%;
 }

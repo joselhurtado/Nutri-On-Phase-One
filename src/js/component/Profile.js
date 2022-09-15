@@ -12,8 +12,7 @@ export default function Profile() {
         >
           <div class="col-4 pt-4" style={{ paddingLeft: "30px" }}>
             <div
-              class="card"
-              style={{ width: "18rem", height: "90%", background: "#E6E6E6" }}
+              class="card profilePicture"
             >
               <img
                 src="https://images.theconversation.com/files/478225/original/file-20220809-24-orxjcu.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop"
@@ -40,11 +39,16 @@ export default function Profile() {
             class="col-8 pt-4"
             style={{
               paddingRight: "60px",
-              paddingLeft: "20px",
+              paddingLeft: "50px",
               paddingTop: "80px",
-              background: "#E6E6E6",
+              background: "#05727A",
+              width: "58%",
+              marginLeft: "20px",
             }}
           >
+            <h4 class="card-title text-center mt-1">
+                My Information
+              </h4>
             <div class="mb-3 pt-4">
               <label for="exampleFormControlInput1" class="form-label">
                 Full Name
@@ -62,7 +66,7 @@ export default function Profile() {
               </label>
               <input
                 type="text"
-                class="form-control"
+                class="form-control usernameInput"
                 id="exampleFormControlInput2"
                 placeholder="Username"
               />
@@ -73,7 +77,7 @@ export default function Profile() {
               </label>
               <input
                 type="email"
-                class="form-control"
+                class="form-control emailAddressInput"
                 id="exampleFormControlInput3"
                 placeholder="name@example.com"
               />
