@@ -13,6 +13,9 @@ import { NavBar } from "./component/NavBar";
 import { Footer } from "./component/footer";
 import RecipeDetails from "/src/js/component/RecipeDetails";
 import Profile from "/src/js/component/Profile";
+import { SignUP } from "./views/SignUp";
+import SignUpQuestions from "./views/SignupQuestions";
+import SignUpQuestionsThird from "./views/SignupQuestionsThird";
 
 
 
@@ -44,6 +47,15 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/WelcomePage">
 							<WelcomePage />
+						</Route>
+						<Route exact path="/SignUP">
+							<SignUP />
+						</Route>
+						<Route exact path="/SignUpQuestions">
+							<SignUpQuestions/>
+						</Route>
+						<Route exact path="/SignUpQuestionsGoals">
+							<SignUpQuestionsThird/>
 						</Route>
 						<Route exact path="/recipe/:theid">
 							<RecipeDetails />
