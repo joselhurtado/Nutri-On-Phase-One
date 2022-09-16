@@ -18,7 +18,7 @@ export default function Profile() {
                 src="https://images.theconversation.com/files/478225/original/file-20220809-24-orxjcu.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop"
                 class="card-img-top mx-auto d-block"
                 style={{
-                  width: "10rem",
+                  width: "12rem",
                   borderRadius: "10rem",
                   paddingTop: "10px",
                   paddingBottom: "10px",
@@ -26,9 +26,9 @@ export default function Profile() {
                 alt="..."
               />
               <div class="card-body">
-                <h2 class="card-text" style={{ textAlign: "center" }}>
+                <h1 class="card-text" style={{ textAlign: "center"}}>
                   BEYONCE
-                </h2>
+                </h1>
                 <h4 style={{ textAlign: "center", paddingBottom: "10px" }}>
                   Nutrition Goals
                 </h4>
@@ -38,19 +38,19 @@ export default function Profile() {
           <div
             class="col-8 pt-4"
             style={{
-              paddingRight: "60px",
+              paddingRight: "50px",
               paddingLeft: "50px",
               paddingTop: "80px",
-              background: "#05727A",
+              background: "#004C52",
               width: "58%",
               marginLeft: "20px",
             }}
           >
-            <h4 class="card-title text-center mt-1">
+            <h1 class="card-title text-center mt-1">
                 My Information
-              </h4>
+              </h1>
             <div class="mb-3 pt-4">
-              <label for="exampleFormControlInput1" class="form-label">
+              <label for="exampleFormControlInput1" class="form-label fullName">
                 Full Name
               </label>
               <input
@@ -61,7 +61,7 @@ export default function Profile() {
               />
             </div>
             <div class="mb-3">
-              <label for="exampleFormControlInput2" class="form-label">
+              <label for="exampleFormControlInput2" class="form-label usernameInput">
                 Username
               </label>
               <input
@@ -72,7 +72,7 @@ export default function Profile() {
               />
             </div>
             <div class="mb-3">
-              <label for="exampleFormControlInput3" class="form-label">
+              <label for="exampleFormControlInput3" class="form-label emailAddressInput">
                 Email Address
               </label>
               <input
@@ -95,9 +95,9 @@ export default function Profile() {
           <div class="col-6">
             <div class="card p personalDietCircle">
               <div class="card-body innerCircle">
-                <h4 class="card-title text-center dietCircleTitle">
+                <h1 class="card-title text-center dietCircleTitle">
                   Vegetarian Diet
-                </h4>
+                </h1>
                 <p class="card-text text-center">My Weight Gain Journey</p>
                 <div class="card-text-diet">
                   <ul class="list-group list-group-flush text-center">
@@ -112,24 +112,60 @@ export default function Profile() {
           </div>
           <div class="col-6">
             <div class="card calorie-calculator">
-              <h4 class="card-title text-center mt-5 bg-white">
+              <h1 class="card-title text-center mt-5 bg-white mb-4">
                 Calorie Calculator
-              </h4>
-              <div class="col-sm">
+              </h1>
+              <div class="row">
+                <h1 class="card-title text-center m-2 text-muted">My Height</h1>
+                <div class="col">
                 <label
                   for="exampleFormControlInput3"
+                  class="form-label bmiAge"
+                >
+                </label>
+                <input
+                  type="text"
+                  class="form-control feetInput"
+                  id="exampleFormControlInput"
+                  placeholder="FEET"
+                  /> 
+                </div>
+                <div class="col">
+                  <label
+                  for="exampleFormControlInput3"
                   class="form-label"
-                ></label>
+                >
+                </label>
+                <input
+                  type="text"
+                  class="form-control inchesInput"
+                  id="exampleFormControlInput"
+                  placeholder="INCHES"
+                  />
+                </div>
+                </div>
+              <div class="col-sm">
+            
+              <h1 class="card-title text-center m-2 text-muted">My Weight</h1>
+
+                <label
+                  for="exampleFormControlInput3"
+                  class="form-label bmiAge"
+                >
+                </label>
                 <input
                   type="text"
                   class="form-control ageInput"
                   id="exampleFormControlInput"
-                  placeholder="Age"
-                />
-                <fieldset class="row mb-3">
-                  <legend class="col-form-label col-sm-2 pt-0 gender-label">
+                  placeholder="lbs."
+                  />
+                  </div>
+                <div class="row mb-3 genderRow">
+                  <div class="col">
+                  <h1 class="col-form-label col-sm-2 pt-0 text-muted gender-label">
                     Gender
-                  </legend>
+                  </h1>
+                  </div>
                   <div class="col-sm-10 gender-options">
                     <div class="form-check">
                       <input
@@ -169,35 +205,7 @@ export default function Profile() {
                       </label>
                     </div>
                   </div>
-                </fieldset>
-              </div>
-              <div class="input-group height">
-                <span class="input-group-text">Height</span>
-                <input
-                  type="text"
-                  aria-label="First name"
-                  class="form-control"
-                  placeholder="feet"
-                />
-                <input
-                  type="text"
-                  aria-label="Last name"
-                  class="form-control"
-                  placeholder="inches"
-                />
-              </div>
-              <div class="col-sm">
-                <label
-                  for="exampleFormControlInput3"
-                  class="form-label"
-                ></label>
-                <input
-                  type="text"
-                  class="form-control weight"
-                  id="exampleFormControlInput"
-                  placeholder="Weight (lbs)"
-                />
-              </div>
+                </div>
               <select
                 class="form-select activity-level"
                 aria-label="Default select example"
@@ -223,10 +231,11 @@ export default function Profile() {
             </div>
           </div>
         </div>
+        </div>
         <div class="col-6 favoriteCard">
           <div class="card">
             <div class="card-body d-flex justify-content-center align-items-center flex-column favoriteMeal">
-              <h5 class="card-title text-center text-dark">My Favorite Meals</h5>
+              <h1 class="card-title text-center text-dark">My Favorite Meals</h1>
               <div
                 id="carouselExampleSlidesOnly"
                 class="carousel slide"
@@ -284,7 +293,6 @@ export default function Profile() {
                 </button>
               </div>
             </div>
-          </div>
         </div>
         </div>
     </div>

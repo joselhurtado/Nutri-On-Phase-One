@@ -4,14 +4,26 @@
 .ageInput{
     margin-bottom: 5%;
     width: 30%;
-    margin-left: 5%;
+    font-family: 'Poppins', sans-serif;
+    color: #252525;
+    text-transform: uppercase;
+    margin-left:35%;
+    margin-top:-4%;
 }
+
 .gender-label{
-    margin-left: 5%
+    margin-left: 9%;
+    font-family: 'Poppins', sans-serif;
+    color: #252525;
+    text-transform: uppercase;
+    font-size: 20px;
 }
 .gender-options{
-    margin-left:19%;
+    margin-left:30%;
     margin-top: -5%;
+    font-family: 'Poppins', sans-serif;
+    color: #252525;
+    text-transform: uppercase;
 }
 .height{
     width:55%;
@@ -41,22 +53,24 @@
     margin-left: -12%;
 }
 .calorie-calculator{
-    margin-right: 28%;
+    margin-right: 16%;
     margin-left: 6%;
 }
+.genderRow{
+    margin-left:18%;
+}
 .fullName{
-    background-color: "#E6E6E6";
-    color: rgb(230, 230, 230);
+    color: white;
     font-size: 118%;
     font-family: 'Poppins', sans-serif;
 }
 .usernameInput{
-    color: rgb(230, 230, 230);
+    color: white;
     font-size: 118%;
     font-family: 'Poppins', sans-serif;
 }
 .emailAddressInput{
-    color: rgb(230, 230, 230);
+    color: white;
     font-size: 118%;
     font-family: 'Poppins', sans-serif;
 }
@@ -67,7 +81,7 @@
     background: rgb(230, 230, 230);
 }
 .favoriteCard{
-    margin-top: 50px;
+    margin-top: 90px;
     margin-bottom: 50px;
     margin-left: 310px;
     backgroundColor: rgb(230, 230, 230);
@@ -78,6 +92,22 @@
 .profilePicture{
     width: 18rem;
     height: 90%;
-    background-color: #05727A;
-    margin-left: 9%;
+    background-color: #004C52;
+    margin-left: 22%;
+}
+.feetInput{
+    font-family: 'Poppins', sans-serif;
+    color: #252525;
+    width:60%;
+    text-transform: uppercase;
+    margin-left: 40%;
+    margin-top:-8%;
+    margin-bottom:8%;
+}
+.inchesInput{
+    font-family: 'Poppins', sans-serif;
+    color: #252525;
+    width:60%;
+    text-transform: uppercase;
+    margin-top:-8%;
 }
